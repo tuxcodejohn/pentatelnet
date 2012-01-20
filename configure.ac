@@ -7,8 +7,11 @@ AC_DEFINE(DOMAIN_NAME,["c3d2.de"],  domain that serves this stuff )
 
 
 dnl put this to gengetopt stuff.....
-AC_DEFINE(MY_LISTEN_PORT,[11123],Port we listen for requests)
-
+AC_ARG_WITH(listenport,
+	    [  --with-listenport=        specify the portnumber to listen for connections],
+	    AC_DEFINE(MY_LISTEN_PORT,$withval) ,
+	    AC_DEFINE(MY_LISTEN_PORT,[11123])
+	    )
 
 AM_INIT_AUTOMAKE([ color-tests \
 		  silent-rules \
@@ -23,9 +26,6 @@ dnl GENGETOPT=$gengetopt
 dnl AC_SUBST(GENGETOPT)
 dnl AC_ARG_VAR(var-name, help-string)
 
-dnl AC_ARG_ENABLE(debug_pc,
-dnl 	      [  --enable-debug_pc    Thou shall use this to debug without an icnovalike platform],
-dnl 	      AC_DEFINE([DEBUG_NOT_ICNOVA]), )
 
 AC_OUTPUT([
 Makefile
