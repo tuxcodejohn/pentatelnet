@@ -9,8 +9,8 @@ AC_DEFINE(DOMAIN_NAME,["c3d2.de"],  domain that serves this stuff )
 dnl put this to gengetopt stuff.....
 AC_ARG_WITH(listenport,
 	    [  --with-listenport=        specify the portnumber to listen for connections],
-	    AC_DEFINE(MY_LISTEN_PORT,$withval) ,
-	    AC_DEFINE(MY_LISTEN_PORT,[11123])
+	    AC_DEFINE(MY_LISTEN_PORT,$withval,[port to listen on]) ,
+	    AC_DEFINE(MY_LISTEN_PORT,[11123],[port to listen on])
 	    )
 
 AM_INIT_AUTOMAKE([ color-tests \
