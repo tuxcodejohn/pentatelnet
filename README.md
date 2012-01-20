@@ -9,6 +9,11 @@ obey its awesomeness.... when it is done :-)
 ###Dependencies
 Sorry bu you'll need an installation of a libevent with at least a version of 2.0.0 .
 
+Debian : sudo aptitude install libevent-dev 
+
+make sure to purge pulseaudio first…
+
+
 ### Get the source code
 You already have it, don't you? Otherwise encurage me to fix the instructions
 here and follow them afterwards
